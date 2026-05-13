@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFB6C1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF8FA3;
+}
+
+/* ─── 3D Hero Gradient Background ─── */
+.hero-gradient-bg {
+  background: linear-gradient(
+    135deg,
+    #1a0a0f 0%,
+    #2d0f1a 20%,
+    #3d1a25 40%,
+    #2a1a10 60%,
+    #1a150f 80%,
+    #0f0a05 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Hero Mesh Overlay ─── */
+.hero-mesh-overlay {
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(255,140,160,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(212,175,55,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(181,231,207,0.07) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ─── Hero Entrance Animations ─── */
+.hero-fade-in {
+  opacity: 0;
+  animation: heroFadeIn 0.9s ease forwards;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-slide-up {
+  opacity: 0;
+  animation: heroSlideUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(35px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-underline {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineGrow 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+}
+
+@keyframes underlineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ─── Logo Glow ─── */
+.logo-glow {
+  box-shadow: 0 0 0 0 rgba(255,140,160,0);
+  animation: logoGlow 3s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,140,160,0), 0 0 0 3px rgba(255,255,255,0.2); }
+  50%       { box-shadow: 0 0 25px 6px rgba(255,140,160,0.35), 0 0 0 3px rgba(255,255,255,0.3); }
+}
+
+/* ─── Floating Orb Animations ─── */
+@keyframes floatOrb {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-30px) scale(1.05); }
+}
+
+@keyframes floatOrbDelay {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(25px) scale(0.96); }
+}
+
+.animate-float-orb {
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.animate-float-orb-delay {
+  animation: floatOrbDelay 10s ease-in-out 2s infinite;
+}
+
+/* ─── Pulse Ring ─── */
+@keyframes pulseRing {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50%       { transform: scale(1.08); opacity: 0.08; }
+}
+
+@keyframes pulseRingDelay {
+  0%, 100% { transform: scale(1); opacity: 0.2; }
+  50%       { transform: scale(1.12); opacity: 0.06; }
+}
+
+@keyframes lightboxFade {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Gallery Item Entrance ─── */
+@keyframes galleryItemIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-gallery-item {
+  animation: galleryItemIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-pulse-ring {
+  animation: pulseRing 5s ease-in-out infinite;
+}
+
+.animate-pulse-ring-delay {
+  animation: pulseRingDelay 5s ease-in-out 1.5s infinite;
+}
+
+/* ─── 3D Card Hover Effect ─── */
+.card-3d-hover {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.card-3d-hover:hover {
+  box-shadow: 0 20px 50px rgba(255,140,160,0.2), 0 8px 20px rgba(0,0,0,0.08);
+}

@@ -1,0 +1,47 @@
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+out/
+build/
+
+# Vite cache
+.vite/
+vite.config.ts.timestamp*
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+*.lcov
+
+# Auto-generated types (unplugin-auto-import)
+auto-imports.d.ts
