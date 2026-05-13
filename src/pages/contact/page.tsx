@@ -21,6 +21,15 @@ export default function Contact() {
     e.preventDefault();
     setStatus('submitting');
     try {
+      // Save to database
+      await supabase.from('contact_messages').insert({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+      });
+
       const { error } = await supabase.functions.invoke('send-contact-email', {
         body: {
           name: formData.name,

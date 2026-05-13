@@ -51,6 +51,23 @@ export default function Order() {
           ? `${referenceImages.length} reference image(s) uploaded — Uncollectable`
           : 'None';
 
+      // Save to database
+      await supabase.from('orders').insert({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        product_type: formData.productType,
+        cake_size: formData.cakeSize,
+        flavour: formData.flavour,
+        decoration: formData.decoration,
+        event_date: formData.eventDate || null,
+        quantity: parseInt(formData.quantity),
+        delivery_method: formData.deliveryMethod,
+        address: formData.address,
+        special_requests: formData.specialRequests,
+        reference_images: referenceImageNote,
+      });
+
       const { error: fnError } = await supabase.functions.invoke('send-order-email', {
         body: {
           name: formData.name,
