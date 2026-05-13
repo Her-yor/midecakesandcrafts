@@ -8,7 +8,7 @@ import FloatingWhatsApp from "@/components/feature/FloatingWhatsApp";
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
-      <BrowserRouter basename={__BASE_PATH__}>
+      <BrowserRouter basename={"/"}>
         <AppRoutes />
         <FloatingWhatsApp />
       </BrowserRouter>
