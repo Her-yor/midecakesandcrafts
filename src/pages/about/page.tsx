@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from '@/components/feature/Navbar';
 import Footer from '@/components/feature/Footer';
 
