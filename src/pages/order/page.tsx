@@ -297,7 +297,7 @@ export default function Order() {
                   </div>
 
                   <div className="mt-4">
-                    <label htmlFor="decoration" className="block text-sm font-medium text-charcoal mb-2">Decoration / Theme</label>
+                    <label htmlFor="decoration" className="block text-sm font-medium text-charcoal mb-2">Decoration / Theme / Color</label>
                     <input
                       type="text"
                       id="decoration"
