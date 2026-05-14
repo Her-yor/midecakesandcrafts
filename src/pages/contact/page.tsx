@@ -175,7 +175,10 @@ export default function Contact() {
                     <i className="ri-check-line text-emerald-600 text-3xl" />
                   </div>
                   <h3 className="font-serif text-xl text-charcoal mb-2">Message Sent!</h3>
-                  <p className="text-soft-gray text-sm mb-6">Thank you for reaching out. We will be in touch soon.</p>
+                  <p className="text-soft-gray text-sm mb-3">Thank you for reaching out. We will be in touch soon.</p>
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-3 mb-6 text-sm text-yellow-800 text-left">
+                    📧 <strong>Confirmation email sent!</strong> If you don't see it in your inbox, please check your <strong>spam/junk folder</strong> and mark it as "Not Spam" to receive future updates.
+                  </div>
                   <button
                     type="button"
                     onClick={() => setStatus('idle')}

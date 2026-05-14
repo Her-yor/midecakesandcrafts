@@ -141,7 +141,10 @@ export default function Order() {
                   <i className="ri-check-line text-emerald-600 text-4xl" />
                 </div>
                 <h2 className="font-serif text-2xl md:text-3xl text-charcoal mb-3">Order Submitted!</h2>
-                <p className="text-soft-gray mb-2">Thank you for your order. We will review the details and contact you shortly to confirm.</p>
+                <p className="text-soft-gray mb-3">Thank you for your order. We will review the details and contact you shortly to confirm.</p>
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-3 mb-4 text-sm text-yellow-800 text-left">
+                    📧 <strong>Confirmation email sent!</strong> If you don't see it in your inbox, please check your <strong>spam/junk folder</strong> and mark it as "Not Spam" to receive future updates.
+                  </div>
                 <p className="text-soft-gray text-sm mb-6">For urgent orders, call us at <a href="tel:07588635343" className="text-deep-pink hover:underline">07588 635343</a></p>
                 <button
                   type="button"

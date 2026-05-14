@@ -119,6 +119,48 @@ serve(async (req) => {
       throw new Error(`Resend error: ${err}`);
     }
 
+
+    // Send confirmation to customer
+    const customerHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+        <div style="background: linear-gradient(135deg, #f9a8c9, #fce4ec); padding: 30px; border-radius: 12px 12px 0 0; text-align: center;">
+          <h1 style="margin: 0; color: #c2185b; font-size: 24px;">Order Received! 🎂</h1>
+          <p style="margin: 8px 0 0; color: #ad1457;">Mide Cakes & Crafts</p>
+        </div>
+        <div style="background: #fff; padding: 30px; border: 1px solid #f0f0f0; border-top: none; border-radius: 0 0 12px 12px;">
+          <p style="font-size: 16px; line-height: 1.6;">Hi <strong>${name}</strong>,</p>
+          <p style="line-height: 1.6;">Thank you for placing an order with Mide Cakes & Crafts! We've received your order and will review the details and contact you within <strong>24 hours</strong> to confirm and arrange payment.</p>
+          <div style="background: #fafafa; border-left: 4px solid #f9a8c9; padding: 16px; border-radius: 4px; margin: 20px 0;">
+            <p style="margin: 0 0 8px; font-weight: bold; color: #666;">Order Summary:</p>
+            <p style="margin: 4px 0;">🎂 <strong>Product:</strong> ${productLabel}</p>
+            <p style="margin: 4px 0;">📅 <strong>Event Date:</strong> ${eventDate}</p>
+            <p style="margin: 4px 0;">🚗 <strong>Delivery:</strong> ${deliveryLabel}</p>
+          </div>
+          <p style="line-height: 1.6;">For urgent enquiries, you can reach us directly at:</p>
+          <p style="line-height: 1.6;">📞 <a href="tel:07588635343" style="color: #c2185b;">07588 635343</a><br/>
+          📧 <a href="mailto:midecakesandcrafts@yahoo.com" style="color: #c2185b;">midecakesandcrafts@yahoo.com</a></p>
+          <div style="margin-top: 24px; text-align: center;">
+            <a href="https://midecakesandcrafts.co.uk" style="background: #c2185b; color: white; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block;">Visit Our Website</a>
+          </div>
+        </div>
+        <p style="text-align: center; color: #aaa; font-size: 12px; margin-top: 16px;">Mide Cakes &amp; Crafts &mdash; Chelmsford, Essex</p>
+      </div>
+    `;
+
+    await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: FROM_EMAIL,
+        to: [email],
+        subject: `Your order has been received — Mide Cakes & Crafts`,
+        html: customerHtml,
+      }),
+    });
+
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
