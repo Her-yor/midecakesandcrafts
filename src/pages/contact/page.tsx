@@ -77,10 +77,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Address</h3>
-                    <p className="text-soft-gray text-sm leading-relaxed"> 
-                      <br />
-                      United Kingdom
-                    </p>
+                    <p className="text-soft-gray text-sm leading-relaxed">United Kingdom</p>
                   </div>
                 </div>
 
