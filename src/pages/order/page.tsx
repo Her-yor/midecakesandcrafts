@@ -143,7 +143,7 @@ export default function Order() {
                 <h2 className="font-serif text-2xl md:text-3xl text-charcoal mb-3">Order Submitted!</h2>
                 <p className="text-soft-gray mb-3">Thank you for your order. We will review the details and contact you shortly to confirm.</p>
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-3 mb-4 text-sm text-yellow-800 text-left">
-                    📧 <strong>Confirmation email sent!</strong> If you don't see it in your inbox, please check your <strong>spam/junk folder</strong> and mark it as "Not Spam" to receive future updates.
+                    <svg style="display:inline;vertical-align:middle;margin-right:6px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <strong>Confirmation email sent!</strong> If you don't see it in your inbox, please check your <strong>spam/junk folder</strong> and mark it as "Not Spam" to receive future updates.
                   </div>
                 <p className="text-soft-gray text-sm mb-6">For urgent orders, call us at <a href="tel:07588635343" className="text-deep-pink hover:underline">07588 635343</a></p>
                 <button
