@@ -78,7 +78,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Address</h3>
                     <p className="text-soft-gray text-sm leading-relaxed">
-                      Chelmsford, Essex CM1 6FT
+                      
                       <br />
                       United Kingdom
                     </p>
