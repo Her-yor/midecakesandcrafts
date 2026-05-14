@@ -99,7 +99,7 @@ export default function Footer() {
           </a>
           <span className="mx-2 text-white/20">|</span>
           <a
-            href="tel:+447491474676"
+            href="tel:+44 7491 474676"
             className="text-white/30 font-normal normal-case tracking-normal hover:text-white/50 transition-colors cursor-pointer"
           >
             +44 7491 474676
