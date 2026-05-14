@@ -223,7 +223,7 @@ export default function Gallery() {
               <div key={video.id} className="group rounded-2xl overflow-hidden bg-white">
                 {/* Thumbnail / Player area */}
                 <div className="relative aspect-video overflow-hidden cursor-pointer" onClick={() => setActiveVideo(activeVideo === video.id ? null : video.id)}>
-                  <img
+                  <img loading="lazy"
                     src={video.thumbnail}
                     alt={video.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

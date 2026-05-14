@@ -132,7 +132,7 @@ export default function Consultation() {
       {/* ── HERO ── */}
       <section className="relative min-h-[70vh] md:min-h-[65vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <img loading="lazy"
             src="https://readdy.ai/api/search-image?query=Breathtaking%20luxury%20wedding%20cake%20three%20tier%20with%20cascading%20ivory%20roses%20gold%20leaf%20accents%20and%20delicate%20sugar%20peonies%20displayed%20on%20marble%20pedestal%20elegant%20reception%20hall%20soft%20candlelight%20bokeh%20background%20sophisticated%20professional%20wedding%20photography%20cinematic&width=1600&height=900&seq=200&orientation=landscape"
             alt="Elegant wedding cake consultation"
             className="w-full h-full object-cover object-top"
@@ -548,7 +548,7 @@ export default function Consultation() {
               { src: 'https://readdy.ai/api/search-image?query=Geometric%20modern%20celebration%20cake%20with%20clean%20sharp%20fondant%20panels%20in%20blush%20and%20gold%20hexagonal%20patterns%20mirror%20glaze%20detail%20and%20minimal%20fresh%20flower%20on%20top%20contemporary%20aesthetic%20professional%20food%20photography&width=400&height=500&seq=38&orientation=portrait', alt: 'Modern geometric wedding cake' },
             ].map((img) => (
               <div key={img.alt} className="aspect-[4/5] rounded-2xl overflow-hidden group cursor-pointer">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                <img loading="lazy" src={img.src} alt={img.alt} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
               </div>
             ))}
           </div>

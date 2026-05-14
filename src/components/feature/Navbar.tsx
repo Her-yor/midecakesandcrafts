@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 shrink-0">
-            <img
+            <img loading="lazy"
               src="https://static.readdy.ai/image/c24487287299df464f884e0d1e4e7f21/10be41eff302acc40f28c2214ca4a758.jpeg"
               alt="Mide Cakes and Crafts Logo"
               className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"

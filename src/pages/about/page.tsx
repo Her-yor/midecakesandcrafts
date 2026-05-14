@@ -65,7 +65,7 @@ export default function About() {
 
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <img
+                <img loading="lazy"
                   src="https://readdy.ai/api/search-image?query=Beautiful%20elegant%20woman%20baker%20in%20a%20warm%20home%20kitchen%20decorating%20a%20cake%20with%20buttercream%20flowers%20wearing%20a%20pastel%20apron%20soft%20natural%20lighting%20warm%20inviting%20atmosphere%20professional%20portrait%20photography%20pastel%20colours&width=600&height=800&seq=23&orientation=portrait"
                   alt="Hamzat Aminat Ayomide - Owner of Mide Cakes and Crafts"
                   className="rounded-3xl shadow-lg w-full"

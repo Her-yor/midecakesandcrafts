@@ -135,7 +135,7 @@ export default function Floating3DShowcase() {
                     : '0 10px 30px rgba(0,0,0,0.3)',
                 }}
               >
-                <img
+                <img loading="lazy"
                   src={img.src}
                   alt={img.label}
                   className="w-full h-full object-cover"

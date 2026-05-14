@@ -31,7 +31,7 @@ export default function Pricing() {
               { src: 'https://static.readdy.ai/image/c24487287299df464f884e0d1e4e7f21/abb194cd83336d2449acc74a08a6bfac.png', alt: 'Signature handmade cake by Mide Cakes' },
             ].map((img, i) => (
               <div key={i} className="relative rounded-2xl overflow-hidden aspect-square">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover object-top" />
+                <img loading="lazy" src={img.src} alt={img.alt} className="w-full h-full object-cover object-top" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function Pricing() {
         <div className="max-w-5xl mx-auto mt-12">
           <div className="relative overflow-hidden bg-gradient-to-br from-charcoal to-[#2a1a1a] rounded-3xl p-8 md:p-10">
             <div className="absolute inset-0 opacity-10">
-              <img
+              <img loading="lazy"
                 src="https://readdy.ai/api/search-image?query=Elegant%20white%20wedding%20cake%20with%20floral%20decorations%20soft%20romantic%20background%20luxury%20bridal%20photography&width=1200&height=500&seq=210&orientation=landscape"
                 alt=""
                 className="w-full h-full object-cover"

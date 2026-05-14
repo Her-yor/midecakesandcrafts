@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="w-full px-4 md:px-8 lg:px-12 pt-16 pb-10">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <img
+            <img loading="lazy"
               src="https://static.readdy.ai/image/c24487287299df464f884e0d1e4e7f21/10be41eff302acc40f28c2214ca4a758.jpeg"
               alt="Mide Cakes and Crafts"
               className="w-12 h-12 rounded-full object-cover"

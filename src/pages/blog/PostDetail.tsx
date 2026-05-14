@@ -102,7 +102,7 @@ export default function PostDetail() {
 
       {/* Hero Image */}
       <div className="relative pt-16 md:pt-20 h-[55vh] md:h-[60vh] overflow-hidden">
-        <img
+        <img loading="lazy"
           src={post.image}
           alt={post.title}
           className="w-full h-full object-cover object-top"
@@ -148,7 +148,7 @@ export default function PostDetail() {
         <div className="max-w-2xl mx-auto">
           {/* Author */}
           <div className="flex items-center gap-4 mb-10 pb-8 border-b border-gray-100">
-            <img
+            <img loading="lazy"
               src="https://static.readdy.ai/image/c24487287299df464f884e0d1e4e7f21/10be41eff302acc40f28c2214ca4a758.jpeg"
               alt="Hamzat Aminat Ayomide"
               className="w-12 h-12 rounded-full object-cover border-2 border-soft-pink/30"
@@ -212,7 +212,7 @@ export default function PostDetail() {
                     className="group flex gap-4 bg-white rounded-2xl p-4 border border-gray-100 hover:border-soft-pink/30 transition-all duration-300"
                   >
                     <div className="w-24 h-20 rounded-xl overflow-hidden shrink-0">
-                      <img src={rp.image} alt={rp.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                      <img loading="lazy" src={rp.image} alt={rp.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="min-w-0">
                       <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${categoryColors[rp.category] ?? ''}`}>
