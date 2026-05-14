@@ -139,7 +139,7 @@ export default function Testimonials() {
                 {/* Reviewer */}
                 <div className="flex items-center gap-3 border-t border-gray-50 pt-4">
                   <div className="w-10 h-10 rounded-full overflow-hidden shrink-0">
-                    <img loading="lazy"
+                    <img loading="lazy" width="120" height="120"
                       src={avatarImages[i]}
                       alt={t.name}
                       className="w-full h-full object-cover object-top"

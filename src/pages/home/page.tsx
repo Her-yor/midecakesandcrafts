@@ -91,9 +91,10 @@ export default function Home() {
               {/* Logo badge */}
               <div className="flex items-center gap-3 mb-8 hero-fade-in" style={{ animationDelay: '0.1s' }}>
                 <div className="relative">
-                  <img loading="lazy"
+                  <img fetchpriority="high" decoding="async"
                     src="https://static.readdy.ai/image/c24487287299df464f884e0d1e4e7f21/10be41eff302acc40f28c2214ca4a758.jpeg"
                     alt="Mide Cakes Logo"
+                    width="64" height="64"
                     className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover border-2 border-white/30 logo-glow"
                   />
                   <div className="absolute -top-1 -right-1 w-5 h-5 bg-gold rounded-full flex items-center justify-center">
@@ -301,7 +302,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="relative">
                 <img loading="lazy"
-                  src="https://readdy.ai/api/search-image?query=Warm%20cozy%20home%20bakery%20kitchen%20with%20baking%20tools%20mixing%20bowls%20and%20freshly%20baked%20cakes%20on%20display%20soft%20natural%20lighting%20pastel%20colours%20professional%20interior%20photography%20warm%20inviting%20atmosphere&width=800&height=600&seq=21&orientation=landscape"
+                  src="https://readdy.ai/api/search-image?query=Warm%20cozy%20home%20bakery%20kitchen%20with%20baking%20tools%20mixing%20bowls%20and%20freshly%20baked%20cakes%20on%20display%20soft%20natural%20lighting%20pastel%20colours%20professional%20interior%20photography%20warm%20inviting%20atmosphere&width=800&height=600&seq=21&orientation=landscape" width="800" height="600"
                   alt="Bakery workspace"
                   className="rounded-3xl w-full"
                 />
@@ -357,7 +358,7 @@ export default function Home() {
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img loading="lazy"
-            src="https://readdy.ai/api/search-image?query=Beautiful%20dessert%20table%20display%20with%20various%20cakes%20cupcakes%20and%20pastries%20elegantly%20arranged%20with%20flowers%20and%20candles%20warm%20soft%20lighting%20pastel%20colours%20professional%20event%20photography%20celebration%20atmosphere&width=1920&height=800&seq=22&orientation=landscape"
+            src="https://readdy.ai/api/search-image?query=Beautiful%20dessert%20table%20display%20with%20various%20cakes%20cupcakes%20and%20pastries%20elegantly%20arranged%20with%20flowers%20and%20candles%20warm%20soft%20lighting%20pastel%20colours%20professional%20event%20photography%20celebration%20atmosphere&width=1920&height=800&seq=22&orientation=landscape" width="1920" height="800"
             alt="Dessert table display"
             className="w-full h-full object-cover"
           />

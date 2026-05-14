@@ -138,6 +138,7 @@ export default function Floating3DShowcase() {
                 <img loading="lazy"
                   src={img.src}
                   alt={img.label}
+                  width="500" height="600"
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay gradient */}
