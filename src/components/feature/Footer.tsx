@@ -55,7 +55,7 @@ export default function Footer() {
               <li><Link to="/order" className="text-light-gray hover:text-soft-pink transition-colors text-sm">Order Form</Link></li>
               <li><Link to="/consultation" className="text-light-gray hover:text-soft-pink transition-colors text-sm">Wedding Consultation</Link></li>
               <li><span className="text-light-gray text-sm">United Kingdom</span></li>
-              <li><a href="tel:07588635343" className="text-light-gray hover:text-soft-pink transition-colors text-sm">07588 635343</a></li>
+              <li><a href="tel:07588635343" className="text-light-gray hover:text-soft-pink transition-colors text-sm">+44 7588 635343</a></li>
               <li><a href="mailto:midecakesandcrafts@yahoo.com" className="text-light-gray hover:text-soft-pink transition-colors text-sm">midecakesandcrafts@yahoo.com</a></li>
             </ul>
           </div>
