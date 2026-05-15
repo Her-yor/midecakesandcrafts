@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Navbar from '@/components/feature/Navbar';
 import Footer from '@/components/feature/Footer';
 import { supabase } from '@/lib/supabase';
@@ -88,7 +88,6 @@ export default function Order() {
 
       if (!fnError) {
         setStatus('success');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
         setFormData({
           name: '',
           email: '',
@@ -116,6 +115,12 @@ export default function Order() {
 
   const showCakeSize = formData.productType === 'cake' || formData.productType === 'cupcakes';
   const showAddress = formData.deliveryMethod === 'delivery';
+
+  useEffect(() => {
+    if (status === 'success') {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [status]);
 
   if (status === 'success') {
     return (

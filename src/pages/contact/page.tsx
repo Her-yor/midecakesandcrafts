@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/feature/Navbar';
 import Footer from '@/components/feature/Footer';
 import { supabase } from '@/lib/supabase';
@@ -46,6 +46,12 @@ export default function Contact() {
       setStatus('error');
     }
   };
+
+  useEffect(() => {
+    if (status === 'success') {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [status]);
 
   if (status === 'success') {
     return (
