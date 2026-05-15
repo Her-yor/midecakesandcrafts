@@ -88,6 +88,7 @@ export default function Order() {
 
       if (!fnError) {
         setStatus('success');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         setFormData({
           name: '',
           email: '',
