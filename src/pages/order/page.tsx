@@ -117,6 +117,35 @@ export default function Order() {
   const showCakeSize = formData.productType === 'cake' || formData.productType === 'cupcakes';
   const showAddress = formData.deliveryMethod === 'delivery';
 
+  if (status === 'success') {
+    return (
+      <div className="min-h-screen bg-cream">
+        <Navbar />
+        <div className="flex items-center justify-center min-h-[80vh] px-4">
+          <div className="bg-white rounded-3xl p-10 shadow-sm max-w-lg w-full text-center">
+            <div className="w-20 h-20 bg-mint/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i className="ri-check-line text-emerald-600 text-4xl" />
+            </div>
+            <h2 className="font-serif text-2xl md:text-3xl text-charcoal mb-3">Order Submitted!</h2>
+            <p className="text-soft-gray mb-3">Thank you for your order. We will review the details and contact you shortly to confirm.</p>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-3 mb-4 text-sm text-yellow-800 text-left">
+              <svg style={{display:"inline",verticalAlign:"middle",marginRight:"6px"}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <strong>Confirmation email sent!</strong> If you don't see it in your inbox, please check your <strong>spam/junk folder</strong> and mark it as "Not Spam" to receive future updates.
+            </div>
+            <p className="text-soft-gray text-sm mb-6">For urgent orders, call us at <a href="tel:07588635343" className="text-deep-pink hover:underline">07588 635343</a></p>
+            <button
+              type="button"
+              onClick={() => setStatus('idle')}
+              className="px-6 py-2.5 bg-soft-pink/10 text-deep-pink rounded-full text-sm font-medium hover:bg-soft-pink/20 transition-colors cursor-pointer"
+            >
+              Place another order
+            </button>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-cream">
       <Navbar />

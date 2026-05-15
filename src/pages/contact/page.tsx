@@ -47,6 +47,34 @@ export default function Contact() {
     }
   };
 
+  if (status === 'success') {
+    return (
+      <div className="min-h-screen bg-cream">
+        <Navbar />
+        <div className="flex items-center justify-center min-h-[80vh] px-4">
+          <div className="bg-white rounded-3xl p-10 shadow-sm max-w-lg w-full text-center">
+            <div className="w-16 h-16 bg-mint/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i className="ri-check-line text-emerald-600 text-3xl" />
+            </div>
+            <h3 className="font-serif text-2xl text-charcoal mb-2">Message Sent!</h3>
+            <p className="text-soft-gray text-sm mb-3">Thank you for reaching out. We will be in touch soon.</p>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-3 mb-6 text-sm text-yellow-800 text-left">
+              <svg style={{display:"inline",verticalAlign:"middle",marginRight:"6px"}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <strong>Confirmation email sent!</strong> If you don't see it in your inbox, please check your <strong>spam/junk folder</strong> and mark it as "Not Spam" to receive future updates.
+            </div>
+            <button
+              type="button"
+              onClick={() => setStatus('idle')}
+              className="px-6 py-2.5 bg-soft-pink/10 text-deep-pink rounded-full text-sm font-medium hover:bg-soft-pink/20 transition-colors cursor-pointer"
+            >
+              Send another message
+            </button>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-cream">
       <Navbar />
